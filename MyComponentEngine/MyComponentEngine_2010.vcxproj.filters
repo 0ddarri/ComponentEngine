@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns:atg="http://atg.xbox.com" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8e114980-c1a3-4ada-ad7c-83caadf5daeb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{a43c5c25-0e86-4a20-b64a-883785ff74fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{2c3d4c8c-5d1a-459a-a05a-a4e4b608a44e}</UniqueIdentifier>
+      <Extensions>fx;fxh;hlsl</Extensions>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{a1ed3362-08e9-4077-86a7-9fadc72b4a5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Singleton">
+      <UniqueIdentifier>{428afc4f-567a-4aaa-b49e-f62c2cb41a18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\GameObject">
+      <UniqueIdentifier>{3529cdd5-7c1e-4ab4-b5c1-20fd7ffd9ebe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components">
+      <UniqueIdentifier>{8cee8f53-1077-4cb8-9993-88b6358cbf5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\BaseComponent">
+      <UniqueIdentifier>{1a04c291-437c-4dfa-a764-08f4f7497969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\0Transform">
+      <UniqueIdentifier>{ac0c852a-cdc1-427d-9f2a-5f3eb2a02759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\1MeshRenderer">
+      <UniqueIdentifier>{55d1df4e-05b7-49ac-9ed1-6f54ae467597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Shader">
+      <UniqueIdentifier>{28c811fc-3b8b-4e0c-a006-463c6238ea05}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DXUT\Optional\directx.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <ClInclude Include="DXUT\Core\DXUT.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTenum.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClCompile Include="DXUT\Core\DXUT.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTenum.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClInclude Include="DXUT\Optional\DXUTcamera.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTgui.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTres.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTsettingsdlg.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmesh.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClCompile Include="DXUT\Optional\DXUTcamera.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTgui.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTres.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTsettingsdlg.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmesh.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyComponentEngine.cpp" />
+    <ClCompile Include="Singleton.cpp">
+      <Filter>Engine\Singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Engine\Components\BaseComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Engine\Components\0Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Engine\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshRenderer.cpp">
+      <Filter>Engine\Components\1MeshRenderer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CLInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </CLInclude>
+    <ResourceCompile Include="MyComponentEngine.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ClInclude Include="Singleton.h">
+      <Filter>Engine\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Engine\Components\BaseComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Engine\Components\0Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Engine\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshRenderer.h">
+      <Filter>Engine\Components\1MeshRenderer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
