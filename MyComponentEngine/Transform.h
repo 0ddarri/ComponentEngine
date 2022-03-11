@@ -1,5 +1,4 @@
 #pragma once
-#include "Component.h"
 
 class Transform : public Component
 {
@@ -17,6 +16,6 @@ public:
 
 	virtual void Update();
 
-	D3DXMATRIX Matrix();
+	D3DXMATRIXA16 Matrix();
 };
 

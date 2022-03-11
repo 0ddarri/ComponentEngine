@@ -1,5 +1,2 @@
-﻿  Component.cpp
-  GameObject.cpp
-  MyComponentEngine.cpp
-  코드를 생성하고 있습니다...
-  MyComponentEngine_2010.vcxproj -> D:\DirectX9_Projects\DX\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe
+﻿  Transform.cpp
+  MyComponentEngine_2010.vcxproj -> D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe

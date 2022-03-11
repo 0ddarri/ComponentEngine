@@ -1,4 +1,6 @@
 #include "DXUT.h"
+#include "Component.h"
+#include "Transform.h"
 #include "MeshRenderer.h"
 
 MeshRenderer::MeshRenderer()
@@ -11,22 +13,41 @@ MeshRenderer::~MeshRenderer()
 {
 }
 
+void MeshRenderer::Initialize()
+{
+}
+
 void MeshRenderer::Update()
 {
 }
 
 void MeshRenderer::Render()
 {
-	D3DXMATRIXA16 worldviewprojMatrix;
+	D3DXMATRIXA16 worldMatrix = transform->Matrix();
+	DEVICE->SetTransform(D3DTS_WORLD, &worldMatrix); // 월드 설정
 
-	shader->SetMatrix((D3DXHANDLE)"gWorldViewProjectionMatrix", &worldviewprojMatrix);
+	D3DXVECTOR3 vEyePt(0, 0, -200.0f);
+	D3DXVECTOR3 vLookatPt(0.0f, 0.0f, 0.0f);
+	D3DXVECTOR3 vUpVec(0.0f, 1.0f, 0.0f);
+	D3DXMATRIXA16 matView;
+	D3DXMatrixLookAtLH(&matView, &vEyePt, &vLookatPt, &vUpVec);
+	DEVICE->SetTransform(D3DTS_VIEW, &matView); // 뷰설정
+
+	D3DXMATRIXA16 matProj;
+	D3DXMatrixPerspectiveFovLH(&matProj, D3DX_PI / 4, 540.0f/480.0f, 1.0f, 10000.0f);
+	DEVICE->SetTransform(D3DTS_PROJECTION, &matProj); // 투영설정
+
+	// 쉐이더 설정
+	shader->SetMatrix((D3DXHANDLE)"gWorldMatrix", &worldMatrix);
+	shader->SetMatrix((D3DXHANDLE)"gViewMatrix", &matView);
+	shader->SetMatrix((D3DXHANDLE)"gProjectionMatrix", &matProj);
 	
 	UINT passnum;
 	shader->Begin(&passnum, NULL);
 	for (UINT i = 0; i < passnum; i++)
 	{
 		shader->BeginPass(i);
-		mesh->DrawSubset(0);
+		mesh->DrawSubset(0); // 렌더링
 		shader->EndPass();
 	}
 	shader->End();

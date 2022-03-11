@@ -1,4 +1,6 @@
-float4x4 gWorldViewProjectionMatrix;
+float4x4 gWorldMatrix;
+float4x4 gViewMatrix;
+float4x4 gProjectionMatrix;
 
 struct VS_INPUT
 {
@@ -13,16 +15,16 @@ struct VS_OUTPUT
 VS_OUTPUT vs_main(VS_INPUT Input)
 {
     VS_OUTPUT Output;
-    Output.mPosition = mul(Input.mPosition, gWorldViewProjectionMatrix);
+    Output.mPosition = mul(Input.mPosition, gWorldMatrix);
+    Output.mPosition = mul(Output.mPosition, gViewMatrix);
+    Output.mPosition = mul(Output.mPosition, gProjectionMatrix);
 
     return Output;
 }
 
-float4 gSurfaceColor;
-
 float4 ps_main() : COLOR
 {
-    return gSurfaceColor;
+    return float4(1,0,0,1);
 }
 
 technique colorShader

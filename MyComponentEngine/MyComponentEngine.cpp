@@ -9,7 +9,7 @@
 #include "Transform.h"
 #include "MeshRenderer.h"
 
-GameObject* testObject;
+GameObject* testObject = new GameObject();
 
 //--------------------------------------------------------------------------------------
 // Rejects any D3D9 devices that aren't acceptable to the app by returning false
@@ -44,7 +44,9 @@ bool CALLBACK ModifyDeviceSettings( DXUTDeviceSettings* pDeviceSettings, void* p
 HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc,
                                      void* pUserContext )
 {
-    testObject->AddComponent<Transform>();
+    //testObject->AddComponent<MeshRenderer>();
+    testObject->AddComponent(new Transform);
+    testObject->AddComponent(new MeshRenderer);
     return S_OK;
 }
 

@@ -1,5 +1,4 @@
 #pragma once
-#include "Component.h"
 
 class MeshRenderer : public Component
 {
@@ -10,6 +9,8 @@ protected:
 public:
 	MeshRenderer();
 	virtual ~MeshRenderer();
+
+	virtual void Initialize();
 
 	virtual void Update();
 	virtual void Render();

@@ -1,5 +1,8 @@
 #include "DXUT.h"
 #include "GameObject.h"
+#include "Component.h"
+#include "Transform.h"
+#include "MeshRenderer.h"
 
 GameObject::GameObject()
 {
@@ -8,6 +11,16 @@ GameObject::GameObject()
 
 GameObject::~GameObject()
 {
+}
+
+Component* GameObject::AddComponent(Component* comp)
+{
+	Component* component = comp;
+	component->SetParent(this);
+	component->Initialize();
+	g_inspector.push_back(component);
+	std::cout << g_inspector.size() << std::endl;
+	return component;
 }
 
 //Component* GameObject::AddComponent(Component* component)

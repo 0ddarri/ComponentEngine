@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\DirectX9_Projects\DX\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe</FullPath>
+      <FullPath>D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

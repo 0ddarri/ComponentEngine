@@ -1,29 +1,31 @@
 #pragma once
 #include "Component.h"
-#include "Transform.h"
 
 class GameObject
 {
 private:
 	bool g_isActive = true;
-	Transform* transform;
 	vector<Component*> g_inspector;
 protected:
 public:
 	GameObject();
 	~GameObject();
-	
 
+	Transform* transform;
 
-	template <typename T>
-	T& AddComponent()
-	{
-		T* comp = new T();
-		Component* component = static_cast<Component*>(comp);
-		component->Initialize();
-		g_inspector.emplace_back(component);
-		return *static_cast<T*>(comp);
-	}
+	//template <typename T>
+	//T& AddComponent()
+	//{
+	//	T* comp = new T();
+	//	Component* component = new Component();
+	//	component = static_cast<Component*>(comp);
+	//	component->SetParent(this);
+	//	component->Initialize();
+	//	g_inspector.push_back(component);
+	//	return *static_cast<T*>(comp);
+	//}
+
+	Component* AddComponent(Component* comp);
 
 	template <typename T>
 	T& GetComponent()
