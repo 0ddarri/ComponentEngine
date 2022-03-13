@@ -7,9 +7,12 @@
 #include "resource.h"
 #include "GameObject.h"
 #include "Transform.h"
+#include "Camera.h"
 #include "MeshRenderer.h"
+#include "MainCamera.h"
 
 GameObject* testObject = new GameObject();
+GameObject* testCamera = new GameObject();
 
 //--------------------------------------------------------------------------------------
 // Rejects any D3D9 devices that aren't acceptable to the app by returning false
@@ -47,6 +50,8 @@ HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURF
     //testObject->AddComponent<MeshRenderer>();
     testObject->AddComponent(new Transform);
     testObject->AddComponent(new MeshRenderer);
+
+    testCamera->AddComponent(new Transform);
     return S_OK;
 }
 
@@ -67,7 +72,7 @@ HRESULT CALLBACK OnD3D9ResetDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFA
 //--------------------------------------------------------------------------------------
 void CALLBACK OnFrameMove( double fTime, float fElapsedTime, void* pUserContext )
 {
-    testObject->Update();
+    testObject->Update(fElapsedTime);
 }
 
 
@@ -113,6 +118,7 @@ void CALLBACK OnD3D9LostDevice( void* pUserContext )
 //--------------------------------------------------------------------------------------
 void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
 {
+    testObject->Release();
 }
 
 

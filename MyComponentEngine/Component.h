@@ -18,9 +18,9 @@ public:
 	}
 	void SetParent(GameObject* p);
 
-	virtual void Initialize();
-
-	virtual void Update();
+	virtual void Update(float dt);
 	virtual void Render();
+
+	virtual void Release() PURE;
 };
 

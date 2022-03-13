@@ -1,2 +1,4 @@
-﻿  Transform.cpp
-  MyComponentEngine_2010.vcxproj -> D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe
+﻿  MyComponentEngine.cpp
+Camera.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
+MeshRenderer.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: static class Camera * MainCamera::camera" (?camera@MainCamera@@2PAVCamera@@A)
+D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.

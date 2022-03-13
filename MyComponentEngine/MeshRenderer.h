@@ -10,12 +10,12 @@ public:
 	MeshRenderer();
 	virtual ~MeshRenderer();
 
-	virtual void Initialize();
-
-	virtual void Update();
+	virtual void Update(float dt);
 	virtual void Render();
 
 	LPD3DXMESH SetMesh(wstring path);
 	LPD3DXEFFECT SetShader(wstring path);
+
+	virtual void Release();
 };
 

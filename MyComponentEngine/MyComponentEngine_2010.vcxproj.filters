@@ -36,6 +36,12 @@
     <Filter Include="Engine\Shader">
       <UniqueIdentifier>{28c811fc-3b8b-4e0c-a006-463c6238ea05}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Components\2_Camera">
+      <UniqueIdentifier>{eaa8c3db-caa7-4a71-bcb6-71137e35790b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\GameObject\MainCamera">
+      <UniqueIdentifier>{7db17498-45d9-454b-9c78-f97b19d70b47}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -116,6 +122,12 @@
     <ClCompile Include="MeshRenderer.cpp">
       <Filter>Engine\Components\1MeshRenderer</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Engine\Components\2_Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="MainCamera.cpp">
+      <Filter>Engine\GameObject\MainCamera</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -141,6 +153,12 @@
     </ClInclude>
     <ClInclude Include="MeshRenderer.h">
       <Filter>Engine\Components\1MeshRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Engine\Components\2_Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="MainCamera.h">
+      <Filter>Engine\GameObject\MainCamera</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

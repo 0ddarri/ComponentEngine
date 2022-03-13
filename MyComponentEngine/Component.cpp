@@ -16,12 +16,7 @@ void Component::SetParent(GameObject* p)
 	transform = p->transform;
 }
 
-void Component::Initialize()
-{
-	g_Enabled = true;
-}
-
-void Component::Update()
+void Component::Update(float dt)
 {
 }
 

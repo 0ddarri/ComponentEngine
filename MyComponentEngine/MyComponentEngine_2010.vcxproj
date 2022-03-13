@@ -384,14 +384,18 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="MainCamera.cpp" />
     <ClCompile Include="MeshRenderer.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Singleton.cpp" />
     <ClCompile Include="Transform.cpp" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="MainCamera.h" />
     <ClInclude Include="MeshRenderer.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Singleton.h" />

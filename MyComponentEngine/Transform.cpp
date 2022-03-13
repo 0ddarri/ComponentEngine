@@ -1,5 +1,4 @@
 #include "DXUT.h"
-#include "Component.h"
 #include "Transform.h"
 
 Transform::Transform()
@@ -13,7 +12,7 @@ Transform::~Transform()
 {
 }
 
-void Transform::Update()
+void Transform::Update(float dt)
 {
 }
 
@@ -38,4 +37,11 @@ D3DXMATRIXA16 Transform::Matrix()
 	D3DXMatrixScaling(&scaleMatrix, s.x, s.y, s.z);
 
 	return scaleMatrix * angle * trans;
+}
+
+void Transform::Release()
+{
+	position = { 0,0,0 };
+	rotation = { 0,0,0 };
+	scale = { 1,1,1 };
 }

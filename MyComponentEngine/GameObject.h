@@ -37,11 +37,14 @@ public:
 		}
 	}
 
-	virtual void Update()
+	virtual void Update(float dt)
 	{
 		for (Component* component : g_inspector)
 		{
-			component->Update();
+			if (component->g_Enabled)
+			{
+				component->Update(dt);
+			}
 		}
 	}
 	virtual void Render()
@@ -54,4 +57,6 @@ public:
 			}
 		}
 	}
+
+	virtual void Release();
 };

@@ -17,10 +17,17 @@ Component* GameObject::AddComponent(Component* comp)
 {
 	Component* component = comp;
 	component->SetParent(this);
-	component->Initialize();
 	g_inspector.push_back(component);
 	std::cout << g_inspector.size() << std::endl;
 	return component;
+}
+
+void GameObject::Release()
+{
+	for (auto& it : g_inspector)
+	{
+		it->Release();
+	}
 }
 
 //Component* GameObject::AddComponent(Component* component)

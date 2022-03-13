@@ -1,4 +1,5 @@
 #pragma once
+#include "Component.h"
 
 class Transform : public Component
 {
@@ -14,8 +15,10 @@ public:
 	D3DXVECTOR3 rotation = { 0,0,0 };
 	D3DXVECTOR3 scale = { 1,1,1 };
 
-	virtual void Update();
+	virtual void Update(float dt);
 
 	D3DXMATRIXA16 Matrix();
+
+	virtual void Release();
 };
 
