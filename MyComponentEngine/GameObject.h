@@ -26,16 +26,17 @@ public:
 	//}
 
 	Component* AddComponent(Component* comp);
+	Component* GetComponent(Component* comp);
 
-	template <typename T>
-	T& GetComponent()
-	{
-		for (Component* comp : g_inspector)
-		{
-			if (dynamic_cast<T*>(comp) != nullptr)
-				return *static_cast<T*>(comp);
-		}
-	}
+	//template <typename T>
+	//T& GetComponent()
+	//{
+	//	for (Component* comp : g_inspector)
+	//	{
+	//		if (dynamic_cast<T*>(comp) != nullptr)
+	//			return *static_cast<T*>(comp);
+	//	}
+	//}
 
 	virtual void Update(float dt)
 	{

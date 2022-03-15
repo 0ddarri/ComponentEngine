@@ -9,10 +9,9 @@
 #include "Transform.h"
 #include "Camera.h"
 #include "MeshRenderer.h"
-#include "MainCamera.h"
+#include "Global.h"
 
 GameObject* testObject = new GameObject();
-GameObject* testCamera = new GameObject();
 
 //--------------------------------------------------------------------------------------
 // Rejects any D3D9 devices that aren't acceptable to the app by returning false
@@ -47,11 +46,9 @@ bool CALLBACK ModifyDeviceSettings( DXUTDeviceSettings* pDeviceSettings, void* p
 HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc,
                                      void* pUserContext )
 {
-    //testObject->AddComponent<MeshRenderer>();
     testObject->AddComponent(new Transform);
     testObject->AddComponent(new MeshRenderer);
 
-    testCamera->AddComponent(new Transform);
     return S_OK;
 }
 
@@ -72,6 +69,7 @@ HRESULT CALLBACK OnD3D9ResetDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFA
 //--------------------------------------------------------------------------------------
 void CALLBACK OnFrameMove( double fTime, float fElapsedTime, void* pUserContext )
 {
+    Global::Instance()->Update(fElapsedTime);
     testObject->Update(fElapsedTime);
 }
 
@@ -89,6 +87,7 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
     // Render the scene
     if( SUCCEEDED( pd3dDevice->BeginScene() ) )
     {
+        Global::Instance()->Render();
         testObject->Render();
         V( pd3dDevice->EndScene() );
     }

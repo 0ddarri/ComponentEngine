@@ -1,4 +1,4 @@
-﻿  MyComponentEngine.cpp
-Camera.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
-MeshRenderer.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: static class Camera * MainCamera::camera" (?camera@MainCamera@@2PAVCamera@@A)
-D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
+﻿  MainCamera.cpp
+D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\MainCamera.h(24,2): warning C4091: 'static ': 변수를 선언하지 않으면 'MainCamera' 왼쪽은 무시됩니다.
+D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\MainCamera.cpp(49,23): warning C4316: 'Camera': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+  MyComponentEngine_2010.vcxproj -> D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe

@@ -42,6 +42,12 @@
     <Filter Include="Engine\GameObject\MainCamera">
       <UniqueIdentifier>{7db17498-45d9-454b-9c78-f97b19d70b47}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Scene">
+      <UniqueIdentifier>{19b6392b-92e1-4016-a713-7ea5806b74e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Global">
+      <UniqueIdentifier>{3dcac405-e827-4b88-9752-6257cba94d33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -128,6 +134,12 @@
     <ClCompile Include="MainCamera.cpp">
       <Filter>Engine\GameObject\MainCamera</Filter>
     </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Global.cpp">
+      <Filter>Engine\Global</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -159,6 +171,12 @@
     </ClInclude>
     <ClInclude Include="MainCamera.h">
       <Filter>Engine\GameObject\MainCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Engine\Global</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

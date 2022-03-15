@@ -2,7 +2,6 @@
 #include "Component.h"
 #include "Transform.h"
 #include "Camera.h"
-#include "MainCamera.h"
 #include "MeshRenderer.h"
 
 MeshRenderer::MeshRenderer()
@@ -37,8 +36,8 @@ void MeshRenderer::Render()
 
 	// ½¦ÀÌ´õ ¼³Á¤
 	shader->SetMatrix((D3DXHANDLE)"gWorldMatrix", &worldMatrix);
-	shader->SetMatrix((D3DXHANDLE)"gViewMatrix", &MainCamera::camera->GetViewMatrix());
-	//shader->SetMatrix((D3DXHANDLE)"gProjectionMatrix", &matProj);
+	shader->SetMatrix((D3DXHANDLE)"gViewMatrix", &Global::Instance()->main->camera->GetViewMatrix());
+	shader->SetMatrix((D3DXHANDLE)"gProjectionMatrix", &Global::Instance()->main->camera->GetProjMatrix());
 	
 	UINT passnum;
 	shader->Begin(&passnum, NULL);

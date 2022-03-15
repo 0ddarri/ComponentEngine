@@ -1,20 +1,22 @@
 #pragma once
+#include "Singleton.h"
 #include "Camera.h"
 #include "GameObject.h"
 
-class MainCamera : public GameObject
+static class MainCamera : public GameObject
 {
 private:
+
 protected:
 public:
-	static Camera* camera;
-
 	MainCamera();
 
-	D3DXVECTOR3 GetCamPos();
+	Camera* camera;
 
 	virtual void Update(float dt);
 
 	virtual void Render();
+
+	virtual void Release();
 };
 

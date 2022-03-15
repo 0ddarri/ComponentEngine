@@ -22,6 +22,19 @@ Component* GameObject::AddComponent(Component* comp)
 	return component;
 }
 
+Component* GameObject::GetComponent(Component* comp)
+{
+	for (Component* it : g_inspector)
+	{
+		if (it == comp)
+		{
+			std::wcout << "Find Component" << std::endl;
+			return it;
+		}
+	}
+	return nullptr;
+}
+
 void GameObject::Release()
 {
 	for (auto& it : g_inspector)
