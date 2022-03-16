@@ -6,6 +6,7 @@ MainCamera::MainCamera()
 {
 	std::wcout << "五昔朝五虞 持失切" << std::endl;
 	camera = new Camera();
+	transform->position = { -200,0,0 };
 	camera->SetParent(this);
 }
 

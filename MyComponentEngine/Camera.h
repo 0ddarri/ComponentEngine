@@ -31,5 +31,9 @@ public:
 	void MoveLocalX(float speed);
 	void MoveLocalY(float speed);
 	void MoveLocalZ(float speed);
+
+	void RotateLocalX(float angle);
+	void RotateLocalY(float angle);
+	void RotateLocalZ(float angle);
 };
 

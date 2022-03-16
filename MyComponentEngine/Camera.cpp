@@ -44,9 +44,15 @@ void Camera::SetProj()
 
 void Camera::Update(float dt)
 {
-	if (DXUTIsKeyDown(VK_F1)) MoveLocalZ(-200 * dt);
-	if (DXUTIsKeyDown(VK_F2)) MoveLocalY(-200 * dt);
-	if (DXUTIsKeyDown(VK_F3)) MoveLocalX(-200 * dt);
+	if (DXUTIsKeyDown('W')) MoveLocalZ(200 * dt);
+	if (DXUTIsKeyDown('S')) MoveLocalZ(-200 * dt);
+	if (DXUTIsKeyDown('E')) MoveLocalY(200 * dt);
+	if (DXUTIsKeyDown('Q')) MoveLocalY(-200 * dt);
+	if (DXUTIsKeyDown('A')) MoveLocalX(-200 * dt);
+	if (DXUTIsKeyDown('D')) MoveLocalX(200 * dt);
+	if (DXUTIsKeyDown(VK_F4)) RotateLocalX(-1 * dt);
+	if (DXUTIsKeyDown(VK_F5)) RotateLocalY(-1 * dt);
+	if (DXUTIsKeyDown(VK_F6)) RotateLocalZ(-1 * dt);
 }
 
 void Camera::Render()
@@ -83,4 +89,31 @@ void Camera::MoveLocalZ(float speed)
 	vMove *= speed;
 	transform->position += vMove;
 	g_Look += vMove;
+}
+
+void Camera::RotateLocalX(float angle)
+{
+	D3DXMATRIXA16 rotMatrix;
+	D3DXMatrixRotationAxis(&rotMatrix, &g_Cross, angle);
+
+	D3DXVec3TransformCoord(&g_Look, &g_View, &rotMatrix);
+	g_Look += transform->position;
+}
+
+void Camera::RotateLocalY(float angle)
+{
+	D3DXMATRIXA16 rotMatrix;
+	D3DXMatrixRotationAxis(&rotMatrix, &g_Up, angle);
+
+	D3DXVec3TransformCoord(&g_Look, &g_View, &rotMatrix);
+	g_Look += transform->position;
+}
+
+void Camera::RotateLocalZ(float angle) // æÍ π∫∞° ¿ÃªÛ«‘§ª§ª
+{
+	D3DXMATRIXA16 rotMatrix;
+	D3DXMatrixRotationAxis(&rotMatrix, &g_View, angle);
+
+	D3DXVec3TransformCoord(&g_Cross, &g_Cross, &rotMatrix);
+	D3DXVec3TransformCoord(&g_Up, &g_Up, &rotMatrix);
 }
