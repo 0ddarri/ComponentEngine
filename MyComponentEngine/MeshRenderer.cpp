@@ -7,7 +7,9 @@
 MeshRenderer::MeshRenderer()
 {
 	mesh = SetMesh(L"Resources/Mesh/Teapot.x");
-	shader = SetShader(L"Resources/Shader/ColorShader.fx");
+	shader = SetShader(L"Resources/Shader/mapping.fx");
+
+	material = new Material(L"albedo.tga", L"specular.jpg", L"normal.tga");
 }
 
 MeshRenderer::~MeshRenderer()
@@ -38,6 +40,8 @@ void MeshRenderer::Render()
 	shader->SetMatrix((D3DXHANDLE)"gWorldMatrix", &worldMatrix);
 	shader->SetMatrix((D3DXHANDLE)"gViewMatrix", &Global::Instance()->main->camera->GetViewMatrix());
 	shader->SetMatrix((D3DXHANDLE)"gProjectionMatrix", &Global::Instance()->main->camera->GetProjMatrix());
+
+	shader->SetTexture((D3DXHANDLE)"gDiffuseTexture", material->GetTexture(L"albedo"));
 	
 	UINT passnum;
 	shader->Begin(&passnum, NULL);
@@ -80,4 +84,5 @@ void MeshRenderer::Release()
 {
 	mesh->Release();
 	shader->Release();
+	material->Release();
 }

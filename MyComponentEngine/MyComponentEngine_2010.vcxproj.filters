@@ -48,6 +48,9 @@
     <Filter Include="Engine\Global">
       <UniqueIdentifier>{3dcac405-e827-4b88-9752-6257cba94d33}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Material">
+      <UniqueIdentifier>{f297e93b-c709-412e-a033-f431d2b90c0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -140,6 +143,9 @@
     <ClCompile Include="Global.cpp">
       <Filter>Engine\Global</Filter>
     </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Engine\Material</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -177,6 +183,9 @@
     </ClInclude>
     <ClInclude Include="Global.h">
       <Filter>Engine\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Engine\Material</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

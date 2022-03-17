@@ -50,9 +50,12 @@ void Camera::Update(float dt)
 	if (DXUTIsKeyDown('Q')) MoveLocalY(-200 * dt);
 	if (DXUTIsKeyDown('A')) MoveLocalX(-200 * dt);
 	if (DXUTIsKeyDown('D')) MoveLocalX(200 * dt);
-	if (DXUTIsKeyDown(VK_F4)) RotateLocalX(-1 * dt);
-	if (DXUTIsKeyDown(VK_F5)) RotateLocalY(-1 * dt);
-	if (DXUTIsKeyDown(VK_F6)) RotateLocalZ(-1 * dt);
+	if (DXUTIsKeyDown(VK_UP)) RotateLocalX(-1 * dt);
+	if (DXUTIsKeyDown(VK_DOWN)) RotateLocalX(1 * dt);
+	if (DXUTIsKeyDown(VK_LEFT)) RotateLocalY(-1 * dt);
+	if (DXUTIsKeyDown(VK_RIGHT)) RotateLocalY(1 * dt);
+	if (DXUTIsKeyDown(VK_F1)) RotateLocalZ(1 * dt);
+	if (DXUTIsKeyDown(VK_F2)) RotateLocalZ(-1 * dt);
 }
 
 void Camera::Render()

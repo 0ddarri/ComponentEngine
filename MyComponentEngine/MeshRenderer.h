@@ -1,11 +1,14 @@
 #pragma once
 #include"Global.h"
+#include"Material.h"
 
 class MeshRenderer : public Component
 {
 private:
 	LPD3DXEFFECT shader;
 	LPD3DXMESH mesh;
+
+	Material* material;
 protected:
 public:
 	MeshRenderer();
