@@ -2,6 +2,9 @@ float4x4 gWorldMatrix;
 float4x4 gViewMatrix;
 float4x4 gProjectionMatrix;
 
+float4 gWorldLightPosition;
+float4 gWorldCameraPosition;
+
 struct VS_INPUT
 {
     float4 mPosition : POSITION;

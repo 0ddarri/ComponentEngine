@@ -51,6 +51,12 @@
     <Filter Include="Engine\Material">
       <UniqueIdentifier>{f297e93b-c709-412e-a033-f431d2b90c0f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Components\3_Light">
+      <UniqueIdentifier>{2cf815e6-6ad9-45fa-a714-a5cc1fa9f78b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\3_Light\LightManager">
+      <UniqueIdentifier>{e949c9b4-55d2-476b-818e-f2aebe961dbe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -146,6 +152,12 @@
     <ClCompile Include="Material.cpp">
       <Filter>Engine\Material</Filter>
     </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Engine\Components\3_Light</Filter>
+    </ClCompile>
+    <ClCompile Include="LightManager.cpp">
+      <Filter>Engine\Components\3_Light\LightManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -186,6 +198,12 @@
     </ClInclude>
     <ClInclude Include="Material.h">
       <Filter>Engine\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Engine\Components\3_Light</Filter>
+    </ClInclude>
+    <ClInclude Include="LightManager.h">
+      <Filter>Engine\Components\3_Light\LightManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

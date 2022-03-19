@@ -1,6 +1,7 @@
 #pragma once
 #include"Global.h"
 #include"Material.h"
+#include"LightManager.h"
 
 class MeshRenderer : public Component
 {
@@ -9,6 +10,8 @@ private:
 	LPD3DXMESH mesh;
 
 	Material* material;
+
+	void MeshRender();
 protected:
 public:
 	MeshRenderer();

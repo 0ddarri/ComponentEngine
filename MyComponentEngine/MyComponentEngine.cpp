@@ -8,10 +8,14 @@
 #include "GameObject.h"
 #include "Transform.h"
 #include "Camera.h"
+#include "Light.h"
 #include "MeshRenderer.h"
 #include "Global.h"
 
 GameObject* testObject = new GameObject();
+
+GameObject* testLight1 = new GameObject();
+GameObject* testLight2 = new GameObject();
 
 //--------------------------------------------------------------------------------------
 // Rejects any D3D9 devices that aren't acceptable to the app by returning false
@@ -46,6 +50,11 @@ bool CALLBACK ModifyDeviceSettings( DXUTDeviceSettings* pDeviceSettings, void* p
 HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc,
                                      void* pUserContext )
 {
+    testLight1->AddComponent(new Light());
+    testLight1->transform->position = { -5000,0,0 };
+    testLight2->AddComponent(new Light()); // ¤»¤» µÇ³ß
+    testLight2->transform->position = { 5000,0,0 };
+
     testObject->AddComponent(new Transform);
     testObject->AddComponent(new MeshRenderer);
 
