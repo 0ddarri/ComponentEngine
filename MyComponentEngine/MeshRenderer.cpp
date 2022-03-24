@@ -55,7 +55,6 @@ void MeshRenderer::Render()
 	int i = 0;
 	for (auto it : LightManager::Instance()->lightList)
 	{
-		cout << "num :" << i << endl;
 		D3DXHANDLE light = shader->GetParameterElement((D3DXHANDLE)"lights", i);
 
 		D3DXHANDLE hlightPos;
@@ -108,11 +107,7 @@ LPD3DXMESH MeshRenderer::SetMesh(wstring path)
 	return mesh;
 }
 
-// 이거 로딩 원래 안됬던거임? 아뇨 원래는 잘됬는데 그 멀티라이팅 하다가 ㅈ댔어요
-// 멀티 라이팅 코드를 쓰니 갑자기 로딩이 안됨? 코드가 맞는지도 모르겠어용ㅋㅋ 제가 직접 막한거라
-// 미치겟네ㅋㅋ하핳하 색바꾸면 바뀌나 봐볼까용 ㄱㄱ 너가 하셈 나 곧 나가야해
-// 넹 수고하셨어용
-LPD3DXEFFECT MeshRenderer::SetShader(wstring path) // 쉐이더 로딩 자체가 안되용 뭔가 에러가나요
+LPD3DXEFFECT MeshRenderer::SetShader(wstring path)
 {
 	LPD3DXEFFECT shader;
 	LPD3DXBUFFER errormsg = nullptr;

@@ -41,6 +41,7 @@ void GameObject::Release()
 	{
 		it->Release();
 	}
+	g_inspector.clear();
 }
 
 //Component* GameObject::AddComponent(Component* component)

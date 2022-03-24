@@ -57,6 +57,15 @@
     <Filter Include="Engine\Components\3_Light\LightManager">
       <UniqueIdentifier>{e949c9b4-55d2-476b-818e-f2aebe961dbe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Scene\SceneManager">
+      <UniqueIdentifier>{36db9fa9-25cf-4696-8942-dbb828836191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{7c05269e-b176-46b7-90e8-f141af4c7e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\01_Scenes">
+      <UniqueIdentifier>{51cc0ae1-6335-4511-a015-ff9927c80f8e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -158,6 +167,12 @@
     <ClCompile Include="LightManager.cpp">
       <Filter>Engine\Components\3_Light\LightManager</Filter>
     </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Engine\Scene\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TestScene.cpp">
+      <Filter>Game\01_Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -204,6 +219,12 @@
     </ClInclude>
     <ClInclude Include="LightManager.h">
       <Filter>Engine\Components\3_Light\LightManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Engine\Scene\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene.h">
+      <Filter>Game\01_Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
