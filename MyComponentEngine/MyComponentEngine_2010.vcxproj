@@ -396,6 +396,7 @@
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Singleton.cpp" />
+    <ClCompile Include="SpriteRenderer.cpp" />
     <ClCompile Include="TestScene.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClInclude Include="Camera.h" />
@@ -411,6 +412,7 @@
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Singleton.h" />
+    <ClInclude Include="SpriteRenderer.h" />
     <ClInclude Include="TestScene.h" />
     <ClInclude Include="Transform.h" />
     <None Include="DXUT\Optional\directx.ico" />

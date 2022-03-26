@@ -14,12 +14,17 @@ TestScene::TestScene(wstring n)
 	testLight2 = new GameObject();
 	hierarchy.push_back(testLight2);
 
+	testSprite = new GameObject();
+	hierarchy.push_back(testSprite);
+
 	testLight1->AddComponent(new Light());
 	testLight1->transform->position = { -5000,0,0 };
 	testLight2->AddComponent(new Light()); // ¤»¤» µÇ³ß
 	testLight2->transform->position = { 5000,0,0 };
 	testObject->AddComponent(new Transform);
 	testObject->AddComponent(new MeshRenderer);
+
+	testSprite->AddComponent(new SpriteRenderer(L"Resources/Textures/specular.jpg"));
 }
 
 void TestScene::Start()

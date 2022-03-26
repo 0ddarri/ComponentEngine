@@ -66,6 +66,9 @@
     <Filter Include="Game\01_Scenes">
       <UniqueIdentifier>{51cc0ae1-6335-4511-a015-ff9927c80f8e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Components\4_SpriteRenderer">
+      <UniqueIdentifier>{70799397-c215-4152-87e5-2c9e38e765d9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -173,6 +176,9 @@
     <ClCompile Include="TestScene.cpp">
       <Filter>Game\01_Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="SpriteRenderer.cpp">
+      <Filter>Engine\Components\4_SpriteRenderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -225,6 +231,9 @@
     </ClInclude>
     <ClInclude Include="TestScene.h">
       <Filter>Game\01_Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteRenderer.h">
+      <Filter>Engine\Components\4_SpriteRenderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
