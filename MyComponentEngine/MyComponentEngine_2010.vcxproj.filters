@@ -75,6 +75,12 @@
     <Filter Include="Engine\Texture">
       <UniqueIdentifier>{b70e4896-8b49-4334-9c4a-720b749850fc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Components\6_Text">
+      <UniqueIdentifier>{1168335c-50fd-432f-9bab-7e9fb41f28ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\6_Text\Font">
+      <UniqueIdentifier>{93c4a116-2c9e-4015-9bc3-106e19c25f08}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -191,6 +197,12 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Engine\Texture</Filter>
     </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Engine\Components\6_Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Engine\Components\6_Text\Font</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -252,6 +264,12 @@
     </ClInclude>
     <ClInclude Include="Texture.h">
       <Filter>Engine\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Engine\Components\6_Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Engine\Components\6_Text\Font</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

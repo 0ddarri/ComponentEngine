@@ -5,6 +5,7 @@
 #include "Transform.h"
 #include "MeshRenderer.h"
 #include "Image.h"
+#include "Text.h"
 #include "SpriteRenderer.h"
 
 class TestScene : public Scene
@@ -18,6 +19,7 @@ public:
 
 	GameObject* testSprite;
 	GameObject* testImage;
+	GameObject* testText;
 
 	TestScene(wstring n);
 	virtual void Start();

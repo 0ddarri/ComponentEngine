@@ -9,7 +9,7 @@ Image::Image(wstring path)
 
 void Image::Update(float dt)
 {
-
+	
 }
 
 void Image::Render()

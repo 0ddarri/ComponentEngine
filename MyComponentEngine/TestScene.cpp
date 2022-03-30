@@ -20,6 +20,9 @@ TestScene::TestScene(wstring n)
 	testImage = new GameObject();
 	hierarchy.push_back(testImage);
 
+	testText = new GameObject();
+	hierarchy.push_back(testText);
+
 	testLight1->AddComponent(new Light());
 	testLight1->transform->position = { -5000,0,0 };
 	testLight2->AddComponent(new Light()); // ¤»¤» µÇ³ß
@@ -28,7 +31,9 @@ TestScene::TestScene(wstring n)
 	testObject->AddComponent(new MeshRenderer);
 
 	testSprite->AddComponent(new SpriteRenderer(L"Resources/Textures/specular.jpg"));
-	testImage->AddComponent(new Image(L"Resources/Textures/specular.jpg"));
+	//testImage->AddComponent(new Image(L"Resources/Textures/specular.jpg"));
+
+	testText->AddComponent(new Text(60, 0, 100, 0, L"Arial", L"asdfasdfasdf"));
 }
 
 void TestScene::Start()
