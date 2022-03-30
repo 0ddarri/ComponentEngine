@@ -4,6 +4,7 @@
 #include "Light.h"
 #include "Transform.h"
 #include "MeshRenderer.h"
+#include "Image.h"
 #include "SpriteRenderer.h"
 
 class TestScene : public Scene
@@ -16,6 +17,7 @@ public:
 	GameObject* testLight2;
 
 	GameObject* testSprite;
+	GameObject* testImage;
 
 	TestScene(wstring n);
 	virtual void Start();

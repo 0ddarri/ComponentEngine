@@ -356,6 +356,9 @@ using namespace std;
 
 #define DEVICE DXUTGetD3D9Device()
 
+#define SCW 1280
+#define SCH 720
+
 #endif
 
 

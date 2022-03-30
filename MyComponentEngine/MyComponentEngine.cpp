@@ -165,7 +165,7 @@ int main(void)
     DXUTSetHotkeyHandling( true, true, true );  // handle the default hotkeys
     DXUTSetCursorSettings( true, true ); // Show the cursor and clip it when in full screen
     DXUTCreateWindow( L"MyComponentEngine" );
-    DXUTCreateDevice( true, 640, 480 );
+    DXUTCreateDevice( true, SCW, SCH);
 
     // Start the render loop
     DXUTMainLoop();

@@ -69,6 +69,12 @@
     <Filter Include="Engine\Components\4_SpriteRenderer">
       <UniqueIdentifier>{70799397-c215-4152-87e5-2c9e38e765d9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Components\5_Image">
+      <UniqueIdentifier>{d693694d-267d-4a13-95f5-de873e1f465b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Texture">
+      <UniqueIdentifier>{b70e4896-8b49-4334-9c4a-720b749850fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -179,6 +185,12 @@
     <ClCompile Include="SpriteRenderer.cpp">
       <Filter>Engine\Components\4_SpriteRenderer</Filter>
     </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Engine\Components\5_Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Engine\Texture</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -234,6 +246,12 @@
     </ClInclude>
     <ClInclude Include="SpriteRenderer.h">
       <Filter>Engine\Components\4_SpriteRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Engine\Components\5_Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Engine\Texture</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,6 @@
 #pragma once
 #include "Global.h"
+#include "Texture.h"
 #include "Component.h"
 
 class SpriteRenderer : public Component
@@ -9,14 +10,7 @@ protected:
 public:
 	SpriteRenderer(wstring path);
 
-	LPD3DXSPRITE sprite;
-
-	LPDIRECT3DTEXTURE9 texture;
-	LPDIRECT3DTEXTURE9 SetTexture(wstring path);
-
-	D3DXIMAGE_INFO info;
-
-	RECT imgRect;
+	Texture* texture;
 
 	virtual void Update(float dt);
 	virtual void Render();

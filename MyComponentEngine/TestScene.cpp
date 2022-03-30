@@ -17,6 +17,9 @@ TestScene::TestScene(wstring n)
 	testSprite = new GameObject();
 	hierarchy.push_back(testSprite);
 
+	testImage = new GameObject();
+	hierarchy.push_back(testImage);
+
 	testLight1->AddComponent(new Light());
 	testLight1->transform->position = { -5000,0,0 };
 	testLight2->AddComponent(new Light()); // ¤»¤» µÇ³ß
@@ -25,6 +28,7 @@ TestScene::TestScene(wstring n)
 	testObject->AddComponent(new MeshRenderer);
 
 	testSprite->AddComponent(new SpriteRenderer(L"Resources/Textures/specular.jpg"));
+	testImage->AddComponent(new Image(L"Resources/Textures/specular.jpg"));
 }
 
 void TestScene::Start()
