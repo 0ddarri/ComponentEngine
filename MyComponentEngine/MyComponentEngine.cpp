@@ -9,12 +9,6 @@
 #include "Global.h"
 #include "TestScene.h"
 #include "SceneManager.h"
-//
-//GameObject* testObject = new GameObject();
-//
-//GameObject* testLight1 = new GameObject();
-//GameObject* testLight2 = new GameObject();
-TestScene* test = nullptr;
 
 //--------------------------------------------------------------------------------------
 // Rejects any D3D9 devices that aren't acceptable to the app by returning false
@@ -49,18 +43,8 @@ bool CALLBACK ModifyDeviceSettings( DXUTDeviceSettings* pDeviceSettings, void* p
 HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc,
                                      void* pUserContext )
 {
-    test = new TestScene(L"test");
-    SceneManager::Instance()->AddScene(test);
-    SceneManager::Instance()->ChangeScene(test);
-
-    //testLight1->AddComponent(new Light());
-    //testLight1->transform->position = { -5000,0,0 };
-    //testLight2->AddComponent(new Light()); // ¤»¤» µÇ³ß
-    //testLight2->transform->position = { 5000,0,0 };
-
-    //testObject->AddComponent(new Transform);
-    //testObject->AddComponent(new MeshRenderer);
-
+    Global::Instance()->CreateSprite();
+    srand(time(NULL));
     return S_OK;
 }
 
@@ -72,6 +56,8 @@ HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURF
 HRESULT CALLBACK OnD3D9ResetDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc,
                                     void* pUserContext )
 {
+    Global::Instance()->ResetDevice();
+    SceneManager::Instance()->ResetDevice();
     return S_OK;
 }
 
@@ -82,7 +68,6 @@ HRESULT CALLBACK OnD3D9ResetDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFA
 void CALLBACK OnFrameMove( double fTime, float fElapsedTime, void* pUserContext )
 {
     Global::Instance()->Update(fElapsedTime);
-    //testObject->Update(fElapsedTime);
     SceneManager::Instance()->curScene->Update(fElapsedTime);
 }
 
@@ -123,6 +108,8 @@ LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
 //--------------------------------------------------------------------------------------
 void CALLBACK OnD3D9LostDevice( void* pUserContext )
 {
+    Global::Instance()->LostDevice();
+    SceneManager::Instance()->LostDevice();
 }
 
 
@@ -131,8 +118,8 @@ void CALLBACK OnD3D9LostDevice( void* pUserContext )
 //--------------------------------------------------------------------------------------
 void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
 {
-    //testObject->Release();
     SceneManager::Instance()->curScene->Release();
+    Global::Instance()->Release();
 }
 
 
@@ -166,6 +153,9 @@ int main(void)
     DXUTSetCursorSettings( true, true ); // Show the cursor and clip it when in full screen
     DXUTCreateWindow( L"MyComponentEngine" );
     DXUTCreateDevice( true, SCW, SCH);
+
+    SceneManager::Instance()->AddScene(new TestScene(L"test"));
+    SceneManager::Instance()->ChangeScene(L"test");
 
     // Start the render loop
     DXUTMainLoop();

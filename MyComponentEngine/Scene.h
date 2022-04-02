@@ -16,5 +16,8 @@ public:
 	virtual void Render();
 
 	virtual void Release();
+
+	virtual void ResetDevice();
+	virtual void LostDevice();
 };
 

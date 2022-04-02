@@ -19,5 +19,8 @@ public:
 
 	Scene* FindScene(wstring name);
 	Scene* FindScene(int num);
+
+	void ResetDevice();
+	void LostDevice();
 };
 

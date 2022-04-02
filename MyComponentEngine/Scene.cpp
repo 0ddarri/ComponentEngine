@@ -35,3 +35,19 @@ void Scene::Release()
 		it->Release();
 	}
 }
+
+void Scene::ResetDevice()
+{
+	for (auto it : hierarchy)
+	{
+		it->ResetDevice();
+	}
+}
+
+void Scene::LostDevice()
+{
+	for (auto it : hierarchy)
+	{
+		it->LostDevice();
+	}
+}

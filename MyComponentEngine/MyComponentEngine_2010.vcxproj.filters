@@ -81,6 +81,9 @@
     <Filter Include="Engine\Components\6_Text\Font">
       <UniqueIdentifier>{93c4a116-2c9e-4015-9bc3-106e19c25f08}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MyDXUT">
+      <UniqueIdentifier>{cb31bdd2-7a9f-4297-abf2-9d677893ea3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -270,6 +273,9 @@
     </ClInclude>
     <ClInclude Include="Font.h">
       <Filter>Engine\Components\6_Text\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="MyD3DXMath.h">
+      <Filter>MyDXUT</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

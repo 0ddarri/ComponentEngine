@@ -35,6 +35,22 @@ Component* GameObject::GetComponent(Component* comp)
 	return nullptr;
 }
 
+void GameObject::ResetDevice()
+{
+	for (auto it : g_inspector)
+	{
+		it->ResetDevice();
+	}
+}
+
+void GameObject::LostDevice()
+{
+	for (auto it : g_inspector)
+	{
+		it->LostDevice();
+	}
+}
+
 void GameObject::Release()
 {
 	for (auto& it : g_inspector)

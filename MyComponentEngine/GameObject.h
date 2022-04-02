@@ -13,18 +13,6 @@ public:
 
 	Transform* transform;
 
-	//template <typename T>
-	//T& AddComponent()
-	//{
-	//	T* comp = new T();
-	//	Component* component = new Component();
-	//	component = static_cast<Component*>(comp);
-	//	component->SetParent(this);
-	//	component->Initialize();
-	//	g_inspector.push_back(component);
-	//	return *static_cast<T*>(comp);
-	//}
-
 	Component* AddComponent(Component* comp);
 	Component* GetComponent(Component* comp);
 
@@ -58,6 +46,9 @@ public:
 			}
 		}
 	}
+
+	void ResetDevice();
+	void LostDevice();
 
 	virtual void Release();
 };

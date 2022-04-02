@@ -3,7 +3,6 @@
 
 Texture::Texture(wstring path)
 {
-	D3DXCreateSprite(DEVICE, &sprite);
 	SetTexture(path);
 	SetRect(&imgRect, 0, 0, info.Width, info.Height);
 }
@@ -28,6 +27,5 @@ LPDIRECT3DTEXTURE9 Texture::SetTexture(wstring path)
 
 void Texture::Release()
 {
-	sprite->Release();
 	texture->Release();
 }

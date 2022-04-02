@@ -67,3 +67,13 @@ Scene* SceneManager::FindScene(int num)
 	Scene* n = g_SceneList[num];
 	return n;
 }
+
+void SceneManager::ResetDevice()
+{
+	if (curScene) curScene->ResetDevice();
+}
+
+void SceneManager::LostDevice()
+{
+	if (curScene) curScene->LostDevice();
+}

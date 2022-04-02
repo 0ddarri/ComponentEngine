@@ -22,5 +22,8 @@ public:
 	virtual void Render();
 
 	virtual void Release() PURE;
+
+	virtual void ResetDevice();
+	virtual void LostDevice();
 };
 

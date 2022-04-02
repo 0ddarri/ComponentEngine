@@ -25,6 +25,8 @@ void MeshRenderer::Render()
 {
 	D3DXMATRIXA16 worldMatrix = transform->Matrix();
 	DEVICE->SetTransform(D3DTS_WORLD, &worldMatrix); // 월드 설정
+	DEVICE->SetTransform(D3DTS_VIEW, &Global::Instance()->main->camera->GetViewMatrix()); // 뷰설정
+	DEVICE->SetTransform(D3DTS_PROJECTION, &Global::Instance()->main->camera->GetProjMatrix()); // 투영 설정
 
 	D3DXMATRIXA16 worldViewMat;
 	D3DXMatrixMultiply(&worldViewMat, &worldMatrix, &Global::Instance()->main->camera->GetViewMatrix());
@@ -128,4 +130,14 @@ void MeshRenderer::Release()
 	mesh->Release();
 	shader->Release();
 	material->Release();
+}
+
+void MeshRenderer::ResetDevice()
+{
+	if (shader)	shader->OnResetDevice();
+}
+
+void MeshRenderer::LostDevice()
+{
+	if (shader)	shader->OnLostDevice();
 }

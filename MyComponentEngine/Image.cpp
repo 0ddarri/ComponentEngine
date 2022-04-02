@@ -14,7 +14,7 @@ void Image::Update(float dt)
 
 void Image::Render()
 {
-	texture->sprite->Begin(NULL);
+	Global::Instance()->GetSprite()->Begin(NULL);
 
 	D3DXMATRIXA16 worldMatrix = transform->Matrix();
 	DEVICE->SetTransform(D3DTS_WORLD, &worldMatrix);
@@ -39,8 +39,8 @@ void Image::Render()
 	float screenY = ScreenNormalY * SCH;
 
 	D3DXVECTOR3 center(texture->info.Width * 0.5f, texture->info.Height * 0.5f, 0);
-	texture->sprite->Draw(texture->texture, &texture->imgRect, &center, nullptr, D3DXCOLOR(1, 1, 1, 1));
-	texture->sprite->End();
+	Global::Instance()->GetSprite()->Draw(texture->texture, &texture->imgRect, &center, nullptr, D3DXCOLOR(1, 1, 1, 1));
+	Global::Instance()->GetSprite()->End();
 }
 
 void Image::Release()

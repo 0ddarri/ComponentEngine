@@ -12,6 +12,7 @@ Camera::Camera()
 
 	D3DXMatrixLookAtLH(&g_viewMatrix, &eyePos, &Look, &Up);
 	DEVICE->SetTransform(D3DTS_VIEW, &g_viewMatrix); // 뷰설정
+	SetProj();
 }
 
 D3DXMATRIXA16 Camera::GetViewMatrix()
@@ -38,7 +39,7 @@ void Camera::SetView()
 
 void Camera::SetProj()
 {
-	D3DXMatrixPerspectiveFovLH(&g_projMatrix, D3DX_PI / 4, 540.0f / 480.0f, 1.0f, 10000.0f);
+	D3DXMatrixPerspectiveFovLH(&g_projMatrix, D3DX_PI / 4, (float)SCW / (float)SCH, 1.0f, 10000.0f);
 	DEVICE->SetTransform(D3DTS_PROJECTION, &g_projMatrix); // 투영설정
 }
 

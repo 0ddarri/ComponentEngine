@@ -24,5 +24,8 @@ public:
 	LPD3DXEFFECT SetShader(wstring path);
 
 	virtual void Release();
+
+	virtual void ResetDevice();
+	virtual void LostDevice();
 };
 

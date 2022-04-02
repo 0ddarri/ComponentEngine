@@ -11,7 +11,6 @@ Component::Component()
 
 void Component::SetParent(GameObject* p)
 {
-	parent = new GameObject();
 	parent = p;
 	transform = p->transform;
 }
@@ -21,5 +20,13 @@ void Component::Update(float dt)
 }
 
 void Component::Render()
+{
+}
+
+void Component::ResetDevice()
+{
+}
+
+void Component::LostDevice()
 {
 }
