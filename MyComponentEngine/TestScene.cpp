@@ -1,5 +1,6 @@
 #include "DXUT.h"
 #include "TestScene.h"
+#include "MyD3DXMath.h"
 
 
 TestScene::TestScene(wstring n)
@@ -56,4 +57,15 @@ void TestScene::Release()
 {
 	Scene::Release();
 	cout << "³¡" << endl;
+}
+
+void TestScene::LerpTest()
+{
+	D3DXVECTOR3 a(0, 0, 0);
+	D3DXVECTOR3 b(1, 0, 0);
+	D3DXVECTOR3 r;
+
+	r = myMath::Vector3::Lerp(&a, &b, 0.1f);
+
+	std::wcout << r.x << ", " << r.y << endl;
 }

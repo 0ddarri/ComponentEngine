@@ -44,6 +44,15 @@ namespace myMath
 
 			return n;
 		}
+
+		D3DXVECTOR3 Lerp(const D3DXVECTOR3* v1, const D3DXVECTOR3* v2, const float t)
+		{
+			D3DXVECTOR3 result;
+
+			result = *v1 * (1 - t) + *v2 * t;
+
+			return result;
+		}
 	}
 
 	// Vector4

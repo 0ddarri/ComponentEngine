@@ -1,1 +1,2 @@
 D:\DirectX9_Projects\DX\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe
+D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe

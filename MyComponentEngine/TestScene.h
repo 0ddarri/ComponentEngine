@@ -26,5 +26,7 @@ public:
 	virtual void Update(float dt);
 	virtual void Render();
 	virtual void Release();
+
+	void LerpTest();
 };
 
