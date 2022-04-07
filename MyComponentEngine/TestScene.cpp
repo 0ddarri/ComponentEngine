@@ -1,7 +1,5 @@
 #include "DXUT.h"
 #include "TestScene.h"
-#include "MyD3DXMath.h"
-
 
 TestScene::TestScene(wstring n)
 {

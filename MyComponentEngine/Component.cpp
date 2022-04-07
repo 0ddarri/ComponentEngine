@@ -3,6 +3,7 @@
 #include "Transform.h"
 #include "GameObject.h"
 
+
 Component::Component()
 {
 	g_Enabled = true;

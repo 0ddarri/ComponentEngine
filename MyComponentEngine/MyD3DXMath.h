@@ -1,10 +1,17 @@
 #pragma once
 #include <cmath>
-#include "DXUT.h"
+#include <D3DX10.h>
 
 namespace myMath
 {
 	// Float
+	namespace Float
+	{
+		float Lerp(const float f1, const float f2, const float t)
+		{
+			return f1 * (1 - t) + f2 * t;
+		}
+	}
 
 	// Vector2
 
@@ -38,26 +45,32 @@ namespace myMath
 
 		D3DXVECTOR3 Normalize(const D3DXVECTOR3* v) // ∫§≈Õ ¡§±‘»≠
 		{
-			D3DXVECTOR3 n;
-			float length = Length(v);
-			n = *v / length;
-
-			return n;
+			return *v / Length(v);
 		}
 
 		D3DXVECTOR3 Lerp(const D3DXVECTOR3* v1, const D3DXVECTOR3* v2, const float t)
 		{
-			D3DXVECTOR3 result;
-
-			result = *v1 * (1 - t) + *v2 * t;
-
-			return result;
+			return *v1 * (1 - t) + *v2 * t;
 		}
 	}
 
 	// Vector4
 
 	// Matrix
+	namespace Matrix
+	{
+		D3DXMATRIX* MatrixScaling(const D3DXMATRIX* m, D3DXVECTOR3 s)
+		{
+			D3DXMATRIX scaleMat;
+			D3DXMatrixIdentity(&scaleMat);
+
+			scaleMat._11 = s.x;
+			scaleMat._22 = s.y;
+			scaleMat._33 = s.z;
+
+			return &scaleMat;
+		}
+	}
 
 	// Quaternion
 }

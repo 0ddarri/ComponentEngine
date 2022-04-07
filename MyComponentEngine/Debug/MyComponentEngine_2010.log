@@ -1,8 +1,8 @@
-﻿  MyComponentEngine.cpp
+﻿  TestScene.cpp
+D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\MainCamera.h(21,2): warning C4091: 'static ': 변수를 선언하지 않으면 'MainCamera' 왼쪽은 무시됩니다.
+D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\TestScene.cpp(66,6): error C2653: 'myMath': 클래스 또는 네임스페이스 이름이 아닙니다.
+D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\TestScene.cpp(66,23): error C3861: 'Lerp': 식별자를 찾을 수 없습니다.
+  MyComponentEngine.cpp
 D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\MainCamera.h(21,2): warning C4091: 'static ': 변수를 선언하지 않으면 'MainCamera' 왼쪽은 무시됩니다.
 D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\MyComponentEngine.cpp(47,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  TestScene.cpp
-D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\MainCamera.h(21,2): warning C4091: 'static ': 변수를 선언하지 않으면 'MainCamera' 왼쪽은 무시됩니다.
   코드를 생성하고 있습니다...
-D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\MyD3DXMath.h(26): warning C4717: 'myMath::Vector3::Length': 모든 제어 경로에서 재귀적입니다. 함수로 인해 런타임 스택 오버플로가 발생합니다.
-  MyComponentEngine_2010.vcxproj -> D:\DirectX9_Projects\DX\ComponentEngine\ComponentEngine\MyComponentEngine\Debug\MyComponentEngine.exe
