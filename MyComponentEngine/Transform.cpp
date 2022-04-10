@@ -1,5 +1,6 @@
 #include "DXUT.h"
 #include "Transform.h"
+#include "MyD3DXMath.h"
 
 Transform::Transform()
 {
@@ -34,7 +35,8 @@ D3DXMATRIXA16 Transform::Matrix()
 
 	D3DXVECTOR3 s(scale);
 	D3DXMATRIXA16 scaleMatrix;
-	D3DXMatrixScaling(&scaleMatrix, s.x, s.y, s.z);
+	//D3DXMatrixScaling(&scaleMatrix, s.x, s.y, s.z);
+	scaleMatrix = *myMath::Matrix::MatrixScaling(&scaleMatrix, s);
 
 	return scaleMatrix * angle * trans;
 }

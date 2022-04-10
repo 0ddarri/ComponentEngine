@@ -7,6 +7,7 @@
 #include "Image.h"
 #include "Text.h"
 #include "SpriteRenderer.h"
+#include "MyD3DXMath.h"
 
 class TestScene : public Scene
 {

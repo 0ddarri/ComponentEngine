@@ -206,6 +206,9 @@
     <ClCompile Include="Font.cpp">
       <Filter>Engine\Components\6_Text\Font</Filter>
     </ClCompile>
+    <ClCompile Include="MyD3DXMath.cpp">
+      <Filter>MyDXUT</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">

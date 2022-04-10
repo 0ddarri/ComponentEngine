@@ -1,5 +1,6 @@
 #pragma once
 #include "Component.h"
+#include "MyD3DXMath.h"
 
 class Transform : public Component
 {
